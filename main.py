@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request, send_file
-from io import BytesIO
+import io
 import base64
 from flask_cors import CORS, cross_origin
-from pymongo import MongoClient, PyMongo
+from pymongo import MongoClient
 import os
 from bson import *
 from dotenv import load_dotenv
