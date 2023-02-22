@@ -1,6 +1,4 @@
-from flask import Flask, jsonify, request, make_response, send_file, request
-import io
-import flask
+from flask import Flask, jsonify, request, send_file
 from io import BytesIO
 import base64
 from flask_cors import CORS, cross_origin
