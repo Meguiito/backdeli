@@ -3,9 +3,8 @@ import io
 import flask
 from io import BytesIO
 import base64
-from flask_pymongo import PyMongo
 from flask_cors import CORS, cross_origin
-from pymongo import MongoClient
+from pymongo import MongoClient, PyMongo
 import os
 from bson import *
 from dotenv import load_dotenv
@@ -118,6 +117,8 @@ def get_images():
 def deleteimg(id):
   db2.Images.delete_one({'_id': ObjectId(id)})
   return jsonify({'message': 'Image Deleted'})
+
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="0.0.0.0", port=80)
